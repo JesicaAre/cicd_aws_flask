@@ -16,5 +16,9 @@ def data():
 def foo():
     return jsonify({"message": "Hello, Foo"})
 
+@app.route('/', methods=['GET'])
+def index():
+    return jsonify({"message": "No es una ruta válida. Por favor, intente de nuevo"})
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
